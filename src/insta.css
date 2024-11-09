@@ -32,7 +32,9 @@
 /* Main post image */
 .post-image {
     width: 100%;
-    height: auto;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
 }
 
 /* Action icons */
