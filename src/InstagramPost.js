@@ -9,6 +9,10 @@ class InstagramPost extends Component {
         super(props);
         this.state = {
            // Task 4: Declare local state keys and assign them the value correlating to the props parameter of the constructor. For example, potato: props.potato
+           liked: props.liked,
+            saved: props.saved,
+            totalLikes: props.totalLikes,
+            comments: props.comments,
            newComment: ''
         };
     }
