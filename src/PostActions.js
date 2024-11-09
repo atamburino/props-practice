@@ -22,4 +22,6 @@ class PostActions extends Component {
     }
 }
 
+export default PostActions;
+
 

@@ -11,7 +11,7 @@ function App() {
     <div className="app">
       {posts.map((post, index) => (
         <Post 
-          // Task 2: Pass down the data of each JSON object to this child component.
+          // Task 2: Pass down the data of each JSON object to this child component.0
         />
       ))}
     </div>
