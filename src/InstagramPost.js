@@ -9,11 +9,15 @@ class InstagramPost extends Component {
         super(props);
         this.state = {
            // Task 4: Declare local state keys and assign them the value correlating to the props parameter of the constructor. For example, potato: props.potato
-           liked: props.liked,
+            liked: props.liked,
             saved: props.saved,
             totalLikes: props.totalLikes,
             comments: props.comments,
-           newComment: ''
+            userImgURL: props.userImgURL,
+            postImgURL: props.postImgURL,
+            caption: props.caption,
+            userName: props.userName ,
+            newComment: ''
         };
     }
 
@@ -58,8 +62,13 @@ class InstagramPost extends Component {
                 
                 <img 
                 className="post-image" 
-                src={`./images/user/${this.state.postImgURL}`} 
-                alt="Post Image" />
+                src={`./images/post/${this.state.postImgURL}`} 
+                alt="Post Image"
+                onError={(e) => {
+                    console.log(`Failed to load image: ${this.state.postImgURL}`);
+                }}
+            />
+                
 
                 <div className="post-actions">
                     <PostActions
@@ -75,7 +84,7 @@ class InstagramPost extends Component {
                 </div>
                 <div className="post-caption">
                     {/* Task 8: Make the <p> element below dynamically reference the post information. */}
-                    <p><strong>{this.props.userName}</strong> {this.props.caption}.</p>
+                    <p><strong>{this.state.userName}</strong> {this.state.caption}.</p>
                 </div>
                 <div className="comments-section">
                     <CommentSection
