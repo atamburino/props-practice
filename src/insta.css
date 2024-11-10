@@ -109,3 +109,25 @@
 .add-comment button:hover {
     background-color: #007bb5;
 }
+
+/* Task 12 */
+@media all and (min-width: 1300px) {
+    .app {
+        text-align: center;
+    }
+    
+    .post {
+        display: inline-block;
+        width: 35%;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .post-caption {
+        text-align: left;
+    }
+
+    .comments-section {
+        text-align: left;
+    }
+}
